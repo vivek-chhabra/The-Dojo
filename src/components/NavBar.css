@@ -1,0 +1,54 @@
+.NavBar {
+    display: flex;
+    width: 100%;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+    align-items: center;
+    color: rgb(84, 84, 84);
+    justify-content: space-between;
+}
+
+.NavBar .head {
+    gap: 10px;
+    gap: 30px;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand {
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(84, 84, 84);
+}
+
+.NavBar img {
+    width: 30px;
+    filter: invert(25%);
+}
+
+.NavBar .links {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NavBar .navlink {
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(86, 86, 86);
+}
+
+.NavBar .links .active {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.NavBar button {
+    padding: 5px 10px;
+    border: 2px solid var(--primary-color);
+}
+
+
