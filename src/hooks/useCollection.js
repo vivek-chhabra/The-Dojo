@@ -1,6 +1,6 @@
 import { collection, onSnapshot, orderBy, query, where } from "firebase/firestore";
-import { useEffect, useState } from "react";
 import { auth, db } from "../firebase/config";
+import { useEffect, useState } from "react";
 
 export function useCollection(keyRef) {
     const [error, setError] = useState(null);

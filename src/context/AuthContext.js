@@ -18,7 +18,7 @@ const authReducer = (state, action) => {
     }
 };
 
-export default function AuthProvidON_AUTH_READYer({ children }) {
+export default function AuthProvider({ children }) {
     const [state, dispatch] = useReducer(authReducer, {
         user: null,
         isAuthReady: false,
