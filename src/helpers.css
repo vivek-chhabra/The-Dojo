@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Comforter&family=Dancing+Script:wght@400;600&family=Diphylleia&family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,500&family=Inconsolata:wght@200;400;600&family=Lobster&family=Montserrat:wght@100;200;300;400&family=Mukta:wght@200;400&family=Noto+Serif:wght@300;400;500;600&family=Nunito:wght@200;300;400;700;900&family=Oswald:wght@200;400;600&family=Playfair:wght@300&family=Poppins:wght@300;400&family=Roboto+Condensed:wght@300;400&family=Rubik:wght@300;400&family=Tsukimi+Rounded:wght@300;400;500;600&family=Work+Sans:wght@100;200;300&family=Yanone+Kaffeesatz:wght@200;400;600&display=swap");
+
+* {
+    /* font-family: "Aoboshi One", serif;
+    font-family: "Comforter", cursive;
+    font-family: "Dancing Script", cursive;
+    font-family: "Diphylleia", serif;
+    font-family: "EB Garamond", serif;
+    font-family: "Inconsolata", monospace;
+    font-family: "Lobster", cursive;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Mukta", sans-serif;
+    font-family: "Noto Serif", serif;
+    font-family: "Nunito", sans-serif;
+    font-family: "Oswald", sans-serif;
+    font-family: "Playfair", serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Rubik", sans-serif;
+    font-family: "Tsukimi Rounded", sans-serif;
+    font-family: "Work Sans", sans-serif;
+    font-family: "Yanone Kaffeesatz", sans-serif; */
+}
+
+.click {
+    animation: click 0.5s ease 1;
+}
+
+@keyframes click {
+    33% {
+        box-shadow: -1px 1px 10px rgb(31, 126, 146), 1px -1px 10px rgb(31, 126, 146);
+        scale: 1;
+    }
+    66% {
+        box-shadow: -1px 1px 10px rgba(31, 127, 146, 0), 1px -1px 10px rgba(31, 127, 146, 0.043);
+        scale: 0.95;
+    }
+    100% {
+        box-shadow: -1px 1px 10px rgb(31, 126, 146), 1px -1px 10px rgb(31, 126, 146);
+        scale: 1;
+    }
+}
+
+.error {
+    margin-block: 30px;
+    font-family: "Poppins", sans-serif;
+}
+.error strong {
+    font-family: "Poppins", sans-serif;
+}
