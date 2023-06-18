@@ -1,0 +1,67 @@
+.Login {
+    width: 100%;
+    height: 60vh;
+    padding-inline: 30px;
+}
+
+.Login form {
+    padding: 20px;
+    background-color: white;
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+.error {
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+.Login form {
+    box-shadow: 3px 3px 10px gray;
+}
+
+.Login form input {
+    border: 2px solid rgb(113, 113, 113);
+    padding: 5px 10px;
+}
+
+.Login form input[type="checkbox"] {
+    border: 1px solid rgb(97, 97, 97);
+    padding: 0px;
+}
+
+.Login form label {
+    font-size: 95%;
+    margin-bottom: 2px;
+    margin-top: 15px;
+}
+
+.Login form .form-control:focus {
+    border: 2px solid var(--primary-color) !important;
+}
+
+.Login form p {
+    font-size: 150%;
+    font-weight: 600;
+}
+
+.form-check input {
+    bottom: 2px;
+    margin-right: 20px;
+}
+ 
+.Login form button {
+    padding: 5px 10px;
+}
+
+.Login form button:hover {
+    border: 1px solid var(--primary-color);
+}
+
+
+/* sign up form styles */
+
+.name {
+    display: flex;
+    gap: 10px;
+}
