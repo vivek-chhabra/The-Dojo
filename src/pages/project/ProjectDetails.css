@@ -1,0 +1,354 @@
+/* project details section */
+
+.ProjectDetails {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    /* flex-wrap: wrap; */
+}
+
+.ProjectDetails .project-details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 5px #6e8698;
+    border: 1px solid #99bdd8;
+}
+
+.outer {
+    width: 55%;
+}
+
+.ProjectDetails .project-details .project-name {
+    font-weight: 700;
+    word-spacing: 1px;
+    color: var(--heading-color);
+    font-size: 110%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.ProjectDetails .project-details .project-name i {
+    font-size: 110%;
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: none;
+    color: var(--heading-color);
+}
+
+.project-details .dropdown button {
+    padding: 0px !important;
+    border: transparent;
+    background-color: #ffffff !important;
+}
+
+.dropdown-item {
+    padding: 0px;
+    width: 100px !important;
+}
+
+.dropdown-item:hover {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.project-details .dropdown button:hover {
+    background-color: transparent;
+}
+
+.ProjectDetails .project-details .project-name i:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.due-date {
+    margin-block: 5px;
+}
+
+.ProjectDetails .project-details .detail {
+    color: #456b8a;
+    margin-block: 20px;
+    font-weight: 400;
+}
+
+.assigned-by {
+    padding: 8px 20px 8px 5px;
+    font-size: 90%;
+    word-spacing: 2px;
+    border-radius: 5px;
+    background-color: #dcefff;
+    color: #2e5372;
+    width: fit-content;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 3px;
+}
+
+.assigned-to {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 700;
+    word-spacing: 2px;
+    margin-top: 10px;
+    color: var(--heading-color);
+}
+
+.assigned-to .ProfileImg,
+.assigned-to .ProfileImg img {
+    width: 45px;
+    height: 45px;
+}
+
+/* comment section */
+
+.project-comment {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.project-comment .head {
+    font-weight: 700;
+    word-spacing: 1px;
+    color: var(--heading-color);
+    font-size: 110%;
+}
+
+.project-comment .comments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-height: 560px;
+    overflow: auto;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #c4d0db;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #677e91;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.project-comment .comments .comment {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px #677e91;
+    background-color: white;
+    border: 2px solid #677e91;
+    width: 100%;
+}
+
+.comments .comment .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #dcefff;
+    color: #2e5372;
+    font-weight: 600;
+    padding: 5px 7px;
+    border-radius: 50px;
+}
+
+.comments .comment .user:hover {
+    background-color: #3b5265;
+    color: white;
+    cursor: pointer;
+}
+
+.time-passed {
+    opacity: 70%;
+}
+
+.comments .comment .user .ProfileImg,
+.comments .comment .user img {
+    width: 35px;
+    height: 35px;
+}
+
+.comments .comment .msg {
+    color: #386389;
+    margin-top: 20px;
+    padding: 5px 10px;
+    width: 90%;
+    margin-left: auto;
+    font-weight: 600;
+    font-size: 90%;
+    background-color: #b7deff;
+    border-radius: 0 10px 10px 10px;
+}
+
+.comments .comment .msg i {
+    bottom: 5px;
+    right: 5px;
+}
+
+.comment .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment .top .dropdown .btn-secondary {
+    scale: 1.2;
+    bottom: 20px;
+    padding: 5px;
+}
+
+.comment .top .dropdown .btn-secondary:hover {
+    background-color: transparent;
+    color: #2e5372;
+}
+
+.comment .top .dropdown button {
+    background-color: white;
+    color: #2e5372;
+}
+
+.comment .top .user {
+    width: 97%;
+}
+
+.add-comment {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-comment label {
+    font-weight: 600;
+    margin: 0px;
+    color: #2e5372;
+}
+
+.add-comment textarea {
+    resize: none;
+    width: 100%;
+    outline: none;
+    border: 2px solid #91b4d2;
+    padding: 5px 10px;
+    height: 100px;
+    color: #547c9e;
+}
+
+.add-comment textarea:focus {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px #677e91;
+    background-color: white;
+    border: 2px solid #677e91;
+    width: 100%;
+}
+
+.comments {
+    margin-block: 20px;
+}
+
+.add-comment {
+    margin-top: 10px;
+}
+
+.outer .primary-btn,
+.project-comment button,
+.modal-footer a {
+    width: fit-content;
+    color: #2e5372;
+    border: 1px solid #2e5372;
+    margin-top: 20px;
+    text-decoration: none !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.modal {
+    background-color: #ffffff00;
+}
+
+.project-comment button {
+    width: 100%;
+}
+
+.outer .primary-btn:hover,
+.project-comment button:hover,
+.modal-footer a:hover {
+    background-color: #5a85aa;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    color: #213d54;
+    font-weight: 600;
+    border: 1px solid #517b9e;
+}
+
+.modal-footer button {
+    padding: 5px 10px;
+}
+
+.modal-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.users {
+    display: flex;
+    gap: 15px;
+}
+
+.updateComment {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #3b5265;
+    color: white !important;
+    margin-block: 10px;
+    word-spacing: 2px;
+}
+
+@media (max-width: 1245px) {
+    .ProjectDetails {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .outer {
+        width: 100%;
+    }
+
+    .project-comment {
+        width: 100%;
+    }
+}

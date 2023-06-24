@@ -1,11 +1,11 @@
-import { addDoc, collection, deleteDoc, doc, updateDoc, Timestamp, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, updateDoc, Timestamp, serverTimestamp, getDoc } from "firebase/firestore";
 import { useEffect, useReducer, useState } from "react";
 import { auth, db } from "../firebase/config";
 
 // initial state
 const initialState = {
     document: null,
-    isPending: false,
+    isPending: null,
     error: null,
     success: false,
 };
@@ -23,20 +23,20 @@ const firestoreReducer = (state, action) => {
     }
 };
 
-export function useFirestore(refKey) {
+export function useFirestore() {
     const [response, dispatch] = useReducer(firestoreReducer, initialState);
     const [isCancelled, setIsCancelled] = useState(false);
 
-    const refColl = collection(db, refKey);
+    // const refColl = collection(db, refKey);
 
     // add document
-    const addDocument = async (object) => {
+    const addDocument = async (refKey, object) => {
         dispatch({ type: "IS_PENDING" });
 
         // add document
         try {
-            let vivek = new Date();
-            let res = await addDoc(refColl, { ...object, createdAt: Timestamp.fromDate(new Date()), createdAtDate: vivek.toLocaleDateString(), uid: auth?.currentUser?.uid });
+            let date = new Date();
+            let res = await addDoc(collection(db, refKey), { ...object, createdAt: Timestamp.fromDate(new Date()), createdAtDate: date.toLocaleDateString(), uid: auth?.currentUser?.uid });
 
             dispatch({ type: "ADDED_DOCUMENT", payLoad: res });
         } catch (err) {
@@ -47,7 +47,7 @@ export function useFirestore(refKey) {
     };
 
     // delete document
-    const deleteDocument = async (id) => {
+    const deleteDocument = async (refKey, id) => {
         dispatch({ type: "IS_PENDING" });
 
         // deleting the document
@@ -63,12 +63,14 @@ export function useFirestore(refKey) {
     };
 
     // edit document
-    const editDocument = async (id, object) => {
+    const editDocument = async (refKey, object, id) => {
         dispatch({ type: "IS_PENDING" });
 
         // editing document
         try {
-            let res = await updateDoc(doc(db, refKey, id), object);
+            let data = await getDoc(doc(db, refKey, id));
+
+            let res = await updateDoc(doc(db, refKey, id), { ...data.data(), ...object });
 
             dispatch({ type: "ADDED_DOCUMENT", payLoad: res });
         } catch (err) {

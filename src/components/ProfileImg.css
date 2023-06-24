@@ -1,0 +1,31 @@
+.ProfileImg {
+    width: 58px;
+    height: 58px;
+    border-radius: 100px;
+    overflow: hidden;
+    background-color: #c0a9ff;
+    border: 2px solid white;
+    overflow: hidden;
+}
+
+.ProfileImg img {
+    object-fit: cover;
+    object-position: center !important;
+    height: 55px;
+    width: 55px;
+    border-radius: 100px;
+    right: 1px;
+    scale: 1.05;
+}
+
+.add-file {
+    opacity: 0;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.ProfileImg i {
+    bottom: 30px;
+    left: 18px;
+    font-size: 140%;
+}

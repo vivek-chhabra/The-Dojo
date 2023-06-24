@@ -1,0 +1,126 @@
+.Dashboard {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-inline: 40px;
+    padding-bottom: 60px;
+}
+
+.head {
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.filter {
+    padding: 10px;
+    padding-left: 10px;
+    background-color: white;
+    display: flex;
+    box-shadow: 3px 3px 10px rgb(170, 170, 170);
+    border-radius: 5px;
+}
+
+.filter p {
+    margin-right: 10px;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.filter .filter-link {
+    padding-inline: 10px;
+    text-decoration: none;
+    font-size: 90%;
+    font-weight: 700;
+    color: rgb(138, 138, 138);
+    border-right: 2px solid rgb(123, 123, 123);
+    transition: all 0.3s ease;
+}
+
+.filter .filter-link:hover {
+    color: var(--primary-color);
+}
+
+.filter .active {
+    color: var(--primary-color);
+    padding-inline: 20px;
+    transition: all 0.2s ease;
+}
+
+#link-6 {
+    border-right-color: transparent;
+}
+
+.success,
+.primary {
+    margin-block: 0px !important;
+    max-width: 100% !important;
+    margin-bottom: 0px !important;
+    width: 100%;
+}
+
+.sidebar {
+    min-width: 250px;
+    height: 100vh;
+    z-index: -1;
+    background-color: rgb(255, 255, 255);
+}
+
+.online-users {
+    min-width: 210px;
+    background-color: transparent;
+    height: 100vh;
+    z-index: -5;
+}
+
+.Dashboard .error button,
+.primary button,
+.success button {
+    margin-top: 0px;
+}
+
+@media (max-width: 1245px) {
+    .sidebar {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 990px) {
+    .filter {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .filter p {
+        width: 100%;
+        text-align: center;
+    }
+    .filter button {
+        padding: 0px;
+        border: transparent;
+        color: var(--heading-color);
+        font-size: 110%;
+    }
+
+    .filter button i {
+        margin-left: 10px;
+        font-size: 110%;
+    }
+
+    .filter ul {
+        width: 100%;
+        display: flex;
+    }
+
+    .filter ul li {
+        border-bottom: 1px solid rgb(156, 156, 156);
+        padding-block: 5px;
+    }
+
+    .navbar-nav .filter-link {
+        border-right: transparent;
+        width: 100%;
+        
+    }
+}

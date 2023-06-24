@@ -1,9 +1,9 @@
 import { useLoginAuth } from "../../hooks/useLoginAuth";
-import React from "react";
-import "./Login.css";
+import { ErrorMsg, successMsg } from "../../helpers";
 import { useToggle } from "../../hooks/useToggle";
 import { useInput } from "../../hooks/useInput";
-import { ErrorMsg } from "../../helpers";
+import React from "react";
+import "./Login.css";
 
 export default function Login() {
     // use toggle hook
@@ -23,25 +23,25 @@ export default function Login() {
     };
 
     return (
-        <div className="Login">
-            {error && <ErrorMsg error={error}/>}
-            <form onSubmit={handleSubmit}>
+        <div className="Login" style={error && { marginTop: "10px" }}>
+            {error && <ErrorMsg error={error} />}
+            <form onSubmit={handleSubmit} style={error && { marginTop: "30px" }}>
                 <p>Login</p>
                 <div className="mb-0">
-                    <label for="email" className="form-label">
+                    <label htmlFor="email" className="form-label">
                         Email :
                     </label>
-                    <input type="email" value={email} onChange={updateEmail} className="shadow-none form-control" id="email" aria-describedby="emailHelp" />
+                    <input type="email" required value={email} onChange={updateEmail} className="shadow-none form-control" id="email" aria-describedby="emailHelp" />
                 </div>
                 <div className="mb-0">
-                    <label for="password" className="form-label">
+                    <label htmlFor="password" className="form-label">
                         Password :
                     </label>
-                    <input type={showPassword ? "text" : "password"} value={password} onChange={updatePassword} className="shadow-none form-control" id="password" />
+                    <input type={showPassword ? "text" : "password"} required value={password} onChange={updatePassword} className="shadow-none form-control" id="password" />
                 </div>
                 <div className="mb-3 form-check">
                     <input type="checkbox" onClick={toggleShowPassword} className="form-check-input shadow-none" id="exampleCheck1" />
-                    <label className="form-check-label " for="exampleCheck1">
+                    <label className="form-check-label " htmlFor="exampleCheck1">
                         Show Password
                     </label>
                 </div>

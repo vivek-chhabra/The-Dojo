@@ -1,0 +1,95 @@
+.OnlineUsers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 30px;
+    max-width: 210px;
+    width: 100%;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    background-color: white;
+    height: 100vh;
+}
+
+.OnlineUsers .head {
+    font-size: 18px;
+    width: 100%;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    padding-right: 20px;
+    padding-block: 40px 10px;
+}
+
+.head i {
+    padding: 10px 8px;
+    padding-right: 9px;
+    border-radius: 50px;
+    background-color: #d6c8ff;
+    color: #784cf1;
+    font-size: 80%;
+    margin-left: 10px;
+}
+
+.OnlineUsers .list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+.OnlineUsers .item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+    color: rgb(77, 77, 77);
+    width: 100%;
+}
+
+.OnlineUsers .item .name {
+    width: 120px;
+    display: flex;
+    justify-content: flex-end;
+    overflow: auto;
+    padding-left: 5px;
+}
+
+.OnlineUsers .list .item .ProfileImg {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #656565;
+}
+
+.OnlineUsers .list .item img {
+    width: 42px;
+    height: 42px;
+    right: 3px;
+}
+
+.OnlineUsers .online {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    border: 3px solid rgb(64, 202, 147);
+}
+
+/* styles for the current user */
+.active-user {
+    margin-block: 10px;
+    background-color: rgb(220, 239, 255);
+    padding-block: 5px;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+    font-weight: 600;
+}
+.active-user .online {
+    display: none;
+}

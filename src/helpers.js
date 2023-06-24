@@ -28,13 +28,42 @@ function capitalize(string) {
     return newStr.trim();
 }
 
+// to remove the specific element from the array
+function removeEle(array, index) {
+    return [...array.slice(0, index), ...array.slice(index + 1)];
+}
+
+// to replace the specific element from the array
+function replaceEle(array, index, element) {
+    return [...array.slice(0, index), element, ...array.slice(index + 1)];
+}
+
 function ErrorMsg({ error }) {
     return (
         <div className="alert error alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error : </strong>
             {error}
             <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     );
 }
 
-export { randNum, displayFlex, randBool, capitalize, ErrorMsg };
+function SuccessMsg({ msg }) {
+    return (
+        <div className="alert success alert-success alert-dismissible fade show" role="alert">
+            <strong>Woohoo!</strong>, {msg}
+            <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    );
+}
+
+function PrimaryMsg({ msg }) {
+    return (
+        <div className="alert primary alert-primary alert-dismissible fade show" role="alert">
+            <strong>Loading...</strong>, {msg}
+            <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    );
+}
+
+export { randNum, displayFlex, randBool, capitalize, ErrorMsg, SuccessMsg, PrimaryMsg, removeEle, replaceEle };

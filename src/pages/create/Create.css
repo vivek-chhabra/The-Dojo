@@ -1,0 +1,52 @@
+.Create form {
+    max-width: 700px;
+    margin-inline: auto;
+    padding: 20px 30px 30px 30px;
+    background-color: white;
+    box-shadow: 5px 5px 0px #677e91;
+    border: 2px solid #677e91;
+    border-radius: 10px;
+}
+
+.Create form h2 {
+    font-size: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    word-spacing: 2px;
+    color: #244866;
+}
+
+.Create form input, .Create form textarea {
+    border: 2px solid #99bdd8;
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+}
+
+.form-check-input {
+    border: 1px solid #99bdd8 !important;
+}
+
+.Create form input:focus, .Create form textarea:focus {
+    border: 2px solid #306189;
+}
+
+form label {
+    font-weight: 600;
+    color: #2e5372;
+}
+
+.Create form button {
+    margin-top: 20px;
+    width: 100%;
+    color: #2e5372;
+    border: 1px solid #2e5372;
+}
+
+.Create form button:hover {
+    border-color: transparent !important;
+    background-color: #5a85aa;
+}

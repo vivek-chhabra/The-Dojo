@@ -1,9 +1,10 @@
 import { useSignUpAuth } from "../../hooks/useSignUpAuth";
 import { useLoginAuth } from "../../hooks/useLoginAuth";
-import { useInput } from "../../hooks/useInput";
-import React from "react";
-import { ErrorMsg } from "../../helpers";
 import { useToggle } from "../../hooks/useToggle";
+import { useInput } from "../../hooks/useInput";
+import { ErrorMsg } from "../../helpers";
+import "../login/Login.css";
+import React from "react";
 
 export default function Signup() {
     // use input hook
@@ -25,39 +26,39 @@ export default function Signup() {
     };
 
     return (
-        <div className="Signup Login">
+        <div className="Signup Login" style={error ? { marginTop: "10px" } : {}}>
             {error && <ErrorMsg error={error} />}
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={error ? { marginTop: "30px" } : {}}>
                 <p>Sign Up</p>
                 <div className="mb-0 name">
                     <div className="first-name">
-                        <label for="f-name" className="form-label">
+                        <label htmlFor="f-name" className="form-label">
                             First Name :
                         </label>
-                        <input type="text" value={firstName} onChange={updateFirstName} className="shadow-none form-control" id="f-name" aria-describedby="emailHelp" />
+                        <input type="text" required value={firstName} onChange={updateFirstName} className="shadow-none form-control" id="f-name" aria-describedby="emailHelp" />
                     </div>
                     <div className="last-name">
-                        <label for="l-name" className="form-label">
+                        <label htmlFor="l-name" className="form-label">
                             Last Name :
                         </label>
-                        <input type="text" value={lastName} onChange={updateLastName} className="shadow-none form-control" id="l-name" aria-describedby="emailHelp" />
+                        <input type="text" required value={lastName} onChange={updateLastName} className="shadow-none form-control" id="l-name" aria-describedby="emailHelp" />
                     </div>
                 </div>
                 <div className="mb-0">
-                    <label for="email" className="form-label">
+                    <label htmlFor="email" className="form-label">
                         Email :
                     </label>
-                    <input type="email" value={email} onChange={updateEmail} className="shadow-none form-control" id="email" />
+                    <input type="email" required value={email} onChange={updateEmail} className="shadow-none form-control" id="email" />
                 </div>
                 <div className="mb-0">
-                    <label for="password" className="form-label">
-                        Password :
+                    <label htmlFor="password" className="form-label">
+                        Create Password :
                     </label>
-                    <input type={showPassword ? "text" : "password"} value={password} onChange={updatePassword} className="shadow-none form-control" id="password" />
+                    <input type={showPassword ? "text" : "password"} required value={password} onChange={updatePassword} className="shadow-none form-control" id="password" />
                 </div>
                 <div className="mb-3 form-check">
-                    <input type="checkbox" onClick={toggleShowPassword} className="form-check-input shadow-none" id="exampleCheck1" />
-                    <label className="form-check-label " for="exampleCheck1">
+                    <input type="checkbox" onClick={toggleShowPassword} className="form-check-input shadow-none" id="showPassword" />
+                    <label className="form-check-label " htmlFor="showPassword">
                         Show Password
                     </label>
                 </div>

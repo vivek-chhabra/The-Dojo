@@ -1,36 +1,37 @@
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
-import ProjectDetails from "./pages/project/ProjectDetails";
+import PageNotFound from "./components/PageNotFound";
 import { AuthContext } from "./context/AuthContext";
 import Home from "./pages/home(dashboard)/Home";
-import Project from "./pages/project/Project";
+import { useContext, useState } from "react";
 import Signup from "./pages/signup/Signup";
-import Create from "./pages/create/Create";
 import NavBar from "./components/NavBar";
 import Login from "./pages/login/Login";
-import { useContext } from "react";
 import "./App.css";
 
-
 function App() {
-    // using params
-    const { id } = useParams();
-
     // auth context
-    const { user } = useContext(AuthContext);
+    const { user, isAuthReady } = useContext(AuthContext);
+
+    // toggling navbar in certain situations
+    const [showNav, setShowNav] = useState(true);
 
     return (
-        <>
-            <NavBar />
-            <Routes>
-                <Route path="/The-Dojo" element={<Navigate to={"/"} />} />
-                <Route path="/" element={user ? <Home /> : <Navigate to={'/login'}/>} />
-                <Route path="/login" element={user ? <Navigate to={'/'}/> : <Login />} />
-                <Route path="/signup" element={user ? <Navigate to={'/'}/> : <Signup />} />
-                <Route path="/create" element={user ? <Create /> : <Navigate to={'/login'}/>} />
-                <Route path="/project" element={user ? <Project /> : <Navigate to={'/login'}/>} />
-                <Route path="/project/:id" element={<ProjectDetails />} />
-            </Routes>
-        </>
+        isAuthReady && (
+            <>
+                {!user && showNav && <NavBar />}
+                <Routes>
+                    <Route path="/The-Dojo" element={<Navigate to={"/dashboard"} />} />
+                    <Route path="/" element={user ? <Navigate to={"/dashboard"} /> : <Navigate to={"/login"} />} />
+                    <Route path="/dashboard/category/:field" element={user ? <Home /> : <Navigate to={"/login"} />} />
+                    <Route path="/dashboard" element={user ? <Home /> : <Navigate to={"/login"} />} />
+                    <Route path="/login" element={user ? <Navigate to={"/dashboard"} /> : <Login />} />
+                    <Route path="/signup" element={user ? <Navigate to={"/dashboard"} /> : <Signup />} />
+                    <Route path="/create" element={user ? <Home /> : <Navigate to={"/login"} />} />
+                    <Route path="/dashboard/project/:id" element={user ? <Home /> : <Navigate to={"/login"} />} />
+                    <Route path="*" element={<PageNotFound setShowNav={setShowNav} />} />
+                </Routes>
+            </>
+        )
     );
 }
 

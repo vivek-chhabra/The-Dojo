@@ -2,6 +2,7 @@
     width: 100%;
     height: 60vh;
     padding-inline: 30px;
+    margin-top: 30px;
 }
 
 .Login form {
@@ -21,7 +22,7 @@
 }
 
 .Login form input {
-    border: 2px solid rgb(113, 113, 113);
+    border: 2px solid #819fb9;
     padding: 5px 10px;
 }
 
@@ -37,7 +38,7 @@
 }
 
 .Login form .form-control:focus {
-    border: 2px solid var(--primary-color) !important;
+    border: 2px solid #21394e !important;
 }
 
 .Login form p {
@@ -49,15 +50,22 @@
     bottom: 2px;
     margin-right: 20px;
 }
- 
+
 .Login form button {
     padding: 5px 10px;
+    color: #2e5372;
+    border: 1px solid #2e5372;
 }
 
 .Login form button:hover {
-    border: 1px solid var(--primary-color);
+    border-color: transparent !important;
+    background-color: #5a85aa;
 }
 
+.btn.btn-primary:disabled , .btn.btn-primary:active{
+    background-color: #5a85aa;
+    border: 1px solid #2e5372;
+}
 
 /* sign up form styles */
 

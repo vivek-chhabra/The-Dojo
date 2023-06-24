@@ -1,7 +1,8 @@
 import { signOut, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "../firebase/config";
+import { auth, db, googleProvider } from "../firebase/config";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { doc, setDoc } from "firebase/firestore";
 
 export function useLoginAuth(email, password) {
     const [error, setError] = useState(null);
@@ -19,6 +20,11 @@ export function useLoginAuth(email, password) {
         // logging in the user
         try {
             let res = await signInWithEmailAndPassword(auth, email, password);
+            console.log("User Logged In Successfully");
+
+            // changing the user collection at db as user logs in
+            const colRef = doc(db, "user", `${auth.currentUser.uid}`); // collection ref
+            await setDoc(colRef, { name: auth.currentUser.displayName, photoURL: auth.currentUser.photoURL, online: true });
 
             // dispatch login action
             dispatch({ type: "LOGIN", payLoad: res.user });
@@ -40,11 +46,10 @@ export function useLoginAuth(email, password) {
     const googleLogin = async () => {
         setIsPending(true);
         setError(null);
-        console.log("initial stage");
 
         try {
             let res = await signInWithPopup(auth, googleProvider);
-            console.log("response", res);
+            console.log("Logged In With Google Successfully");
 
             // dispatch login action
             dispatch({ type: "LOGIN", payLoad: res.user });
