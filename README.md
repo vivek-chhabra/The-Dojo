@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# 🥋 The Dojo 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**The Dojo is a "project assigner" project that allows users to create and assign new projects to different users. Users can navigate through various features to manage projects, add comments, and interact with other users.**
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+> [Run This Project](the-dojo-d28ee.web.app)
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🌟 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
+| Feature                     | Description                                                                                                                                                                                          |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| User Authentication 🔐       | Users can sign up, log in, and log out using the provided buttons or links.                                                                                                                          |
+| User Profile 👤               | The top section of the left sidebar displays the user's profile picture and name. Users can upload a profile picture if they haven't already.                                                    |
+| Create New Project ✏️         | Users can click the "New Project" link in the left sidebar to access the create project form. They can fill in the necessary project details and assign the project to different users.             |
+| Add Project ➕                | After filling in the project details and assigning users, the user can click the "Add Project" button to add the project. The newly created project will then be displayed on the dashboard page. |
+| Project Details ℹ️            | Users can click on a project from the dashboard to view detailed information about the project. Clicking on a project will redirect the user to the detailed project page.                          |  
+| Comments 💬                   | In the detailed project page, users can add comments to the project. Any signed-in user can comment on any project. Users who commented on a project have the ability to edit or delete their comments. |  
+| Project Completion ✅         | Once a project is completed, the user who created the project can click the "Delete Project if it's Done" button at the bottom of the project description to remove the project from the system.    |  
+| User Display 👥               | The right sidebar displays a list of all users. Users who are currently logged in are displayed with a green dot before their names.                                                                 |   
+| Project Filtering 🧹          | The filter bar on the dashboard page allows users to filter projects based on their preferences. Clicking on the provided links will filter the projects accordingly.                               |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+## 🔧 Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+>  
+> - React: The front-end of The Dojo is developed using React, a JavaScript library for building user interfaces.
+>
+> - JSX: JSX is a syntax extension for JavaScript that allows embedding HTML-like structures within JavaScript code. It is used in combination with React to create the user interface components of The Dojo.
+>
+> - CSS: Cascading Style Sheets (CSS) is used to style the user interface components and enhance the visual appearance of The Dojo.
+>
+> - Bootstrap: The Bootstrap framework is utilized to provide a responsive and mobile-friendly design for the web application.
+>
+> - Firestore database: Firestore, a NoSQL cloud database provided by Firebase, is used to store and manage the project data of users.
+>
+> - Firebase Authentication: Firebase Authentication is used to handle user authentication, including sign-up and login functionality.
+>
+> - Firebase Storage: A cloud-based storage solution for storing user-generated content like images and videos.
+>  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+## 🚀 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To run the **The Dojo** application locally, follow these steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository from GitHub:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/vivek-chhabra/The-Dojo.git
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Install the required dependencies using a package manager like npm or yarn. Run the following command in the project directory:
 
-## Learn More
+3. ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Set up Firebase and configure the Firestore database and Firebase Authentication. Refer to the Firebase documentation for detailed instructions on setting up a project and obtaining the necessary credentials.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Replace the Firebase configuration placeholders in the code with your own Firebase project credentials.
 
-### Code Splitting
+6. Start the development server with the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   npm start
+   ```
 
-### Analyzing the Bundle Size
+7. Open your web browser and visit **http://localhost:3000** to access the **The Dojo** application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<br>
 
-### Making a Progressive Web App
+## 👏 Contribution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions to **The Dojo** are welcome! If you have any suggestions, bug fixes, or new features to propose, please follow these steps:
 
-### Advanced Configuration
+1. Fork the **The Dojo** repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Create a new branch for your contribution.
 
-### Deployment
+3. Make your changes and test thoroughly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+4. Commit your changes with clear and descriptive commit messages.
 
-### `npm run build` fails to minify
+5. Push your branch to your forked repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+6. Submit a pull request detailing the changes you've made.
+
+Please note that all contributions will be reviewed, and any necessary feedback or changes will be provided.
+
+<br>
+
+## 📧 Contact
+
+If you have any questions or need to contact me, please feel free to me reach out via email at **vivekcb8642@gmail.com**.
