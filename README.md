@@ -8,6 +8,14 @@
 
 <br>
 
+![Screenshot (66)](https://github.com/vivek-chhabra/The-Dojo/assets/105328667/70f0d99d-85eb-4e60-abca-b108bd6ebf1c)
+
+<br>
+
+![05 08 2023_15 54 27_REC](https://github.com/vivek-chhabra/The-Dojo/assets/105328667/3bf04e12-b37f-48ab-ac80-197293c68ea6)
+
+<br>
+
 ## 🌟 Features
 
 <br>
