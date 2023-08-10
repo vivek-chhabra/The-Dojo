@@ -4,7 +4,7 @@
 
 <br>
 
-> [Run This Project](https://the-dojo-d28ee.firebaseapp.com/)
+> [Live Demo](https://the-dojo-d28ee.firebaseapp.com/)
 
 <br>
 
