@@ -38,21 +38,21 @@
 
 <br>
 
->  
-> - React: The front-end of The Dojo is developed using React, a JavaScript library for building user interfaces.
->
-> - JSX: JSX is a syntax extension for JavaScript that allows embedding HTML-like structures within JavaScript code. It is used in combination with React to create the user interface components of The Dojo.
->
-> - CSS: Cascading Style Sheets (CSS) is used to style the user interface components and enhance the visual appearance of The Dojo.
->
-> - Bootstrap: The Bootstrap framework is utilized to provide a responsive and mobile-friendly design for the web application.
->
-> - Firestore database: Firestore, a NoSQL cloud database provided by Firebase, is used to store and manage the project data of users.
->
-> - Firebase Authentication: Firebase Authentication is used to handle user authentication, including sign-up and login functionality.
->
-> - Firebase Storage: A cloud-based storage solution for storing user-generated content like images and videos.
->  
+  
+ - React: The front-end of The Dojo is developed using React, a JavaScript library for building user interfaces.
+
+ - JSX: JSX is a syntax extension for JavaScript that allows embedding HTML-like structures within JavaScript code. It is used in combination with React to create the user interface components of The Dojo.
+
+ - CSS: Cascading Style Sheets (CSS) is used to style the user interface components and enhance the visual appearance of The Dojo.
+
+ - Bootstrap: The Bootstrap framework is utilized to provide a responsive and mobile-friendly design for the web application.
+
+ - Firestore database: Firestore, a NoSQL cloud database provided by Firebase, is used to store and manage the project data of users.
+
+ - Firebase Authentication: Firebase Authentication is used to handle user authentication, including sign-up and login functionality.
+
+ - Firebase Storage: A cloud-based storage solution for storing user-generated content like images and videos.
+  
 
 <br>
 
