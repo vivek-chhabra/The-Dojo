@@ -1,0 +1,37 @@
+.Signup .hr {
+    width:  100%;
+    border-top: 2px solid #adcbfe;
+    margin-block: 20px;
+}
+
+.Signup .google {
+    width: 100%;
+    padding: 8px 10px;
+    display: flex;
+    gap: 20px;
+    border: 1px solid #2E5372;
+    border-radius: 5px;
+    color: #4e6f8b;
+    align-items: center;
+    font-weight: 600;
+}
+
+.Signup .google:hover {
+    cursor: pointer;
+    background-color: #E8F0FE;
+}
+
+.Signup .google div {
+    text-align: center;
+    width: 75%;
+}
+
+.Signup .btn {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.Signup .google img {
+    width: 25px;
+}

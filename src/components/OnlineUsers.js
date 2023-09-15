@@ -20,13 +20,15 @@ export default function OnlineUsers() {
                 {document &&
                     document.map((doc) => {
                         return (
+                            <>
                             <div className={doc.id === auth?.currentUser?.uid ? "item active-user" : "item"} key={doc.id}>
                                 {doc.online && <span className="online"></span>}
                                 <span className="name">
-                                    {doc.name.split(" ")[0]} {!(doc.id === auth?.currentUser?.uid) ? doc.name.split(" ")[1].charAt(0) : doc.name.split(" ")[1]}
+                                    {doc.name.split(" ")[0]} {!(doc.id === auth?.currentUser?.uid) ? doc.name.split(" ")[1].charAt(0) : doc.name.split(" ")[1].slice(0, 3)}
                                 </span>
                                 {doc.photoURL ? <ProfileImg url={doc.photoURL} color={doc.online ? "#56e1a9" : "white"} /> : <ProfileImg url={blankURL} color={doc.online ? "#56e1a9" : "white"} />}
                             </div>
+                            </>
                         );
                     })}
             </div>

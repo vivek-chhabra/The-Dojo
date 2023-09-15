@@ -4,7 +4,8 @@
     align-items: flex-end;
     text-align: right;
     gap: 30px;
-    max-width: 210px;
+    min-width: 210px;
+    max-width: fit-content;
     width: 100%;
     position: fixed;
     right: 0px;
@@ -37,11 +38,13 @@
     gap: 10px;
     max-height: 90vh;
     overflow: auto;
+    padding-left: 20px;
 }
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
+    display: none;
 }
 
 .OnlineUsers .item {
@@ -55,7 +58,6 @@
 }
 
 .OnlineUsers .item .name {
-    width: 120px;
     display: flex;
     justify-content: flex-end;
     overflow: auto;
@@ -92,4 +94,8 @@
 }
 .active-user .online {
     display: none;
+}
+
+.active-user .ProfileImg {
+    border: 2px solid #56e1a9 !important;
 }
