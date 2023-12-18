@@ -12,10 +12,6 @@
 
 <br>
 
-![05 08 2023_15 54 27_REC](https://github.com/vivek-chhabra/The-Dojo/assets/105328667/3bf04e12-b37f-48ab-ac80-197293c68ea6)
-
-<br>
-
 ## 🌟 Features
 
 <br>
